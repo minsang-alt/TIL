@@ -1,23 +1,15 @@
 module.exports = {
-  title: "hoodie",
-  description: "Hello :) I'm Hudi who developed gatsby-starter-hoodie theme.",
-  author: "Hudi",
-  siteUrl: "https://devhudi.github.io/gatsby-starter-hoodie/",
+  title: "EVO.blog",
+  description: "지식과 경험을 기록하고 공유하는 학습 저장소",
+  author: "evo",
+  siteUrl: "https://evo.blog",
   links: {
-    github: "https://github.com/devHudi",
+    github: "https://github.com/minsang-alt",
     linkedIn: "https://linkedin.com",
-    facebook: "https://www.facebook.com",
-    twitter: "https://twitter.com",
-    x: "https://x.com",
-    instagram: "https://www.instagram.com",
-    medium: "https://medium.com",
-    blogger: "https://blogger.com",
-    email: "mailto:devhudi@gmail.com",
-    resume: "https://hudi.blog",
-    link: "https://hudi.blog",
+    blogger: "https://babgeuleus.tistory.com/"
   },
   utterances: {
-    repo: "devHudi/gatsby-starter-hoodie",
+    repo: "minsang-alt/evo.blog",
     type: "pathname",
   },
 }
