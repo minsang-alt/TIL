@@ -1,7 +1,7 @@
 ---
 title: "Github Actions self-hosted runners로 CI/CD 구축"
-date: 2024-07-10
-update: 2024-07-10
+date: 2024-02-20
+update: 2024-02-20
 tags:
   - AgileHub
   - 배포

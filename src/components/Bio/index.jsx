@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-
 import ProfileImage from "images/profile.png"
 
 import {
@@ -43,7 +42,7 @@ const Profile = styled.div`
   width: 128px;
   height: 128px;
   border-radius: 999px;
-  background-image: url(${profileImageRoot}/profile.png);
+  background-image: url(${ProfileImage});
   background-size: cover;
   background-position: center;
 `
