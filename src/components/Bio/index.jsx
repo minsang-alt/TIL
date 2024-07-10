@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import ProfileImage from "images/profile.png"
+
 import {
   FaGithub,
   FaKaggle,

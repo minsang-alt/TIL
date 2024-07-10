@@ -1,7 +1,7 @@
 module.exports = {
   title: "EVO.blog",
   description: "지식과 경험을 기록하고 공유하는 학습 저장소",
-  author: "evo",
+  author: "MinSang",
   siteUrl: "https://evo.blog",
   links: {
     github: "https://github.com/minsang-alt",
