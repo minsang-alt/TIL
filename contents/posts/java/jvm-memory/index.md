@@ -1,6 +1,6 @@
 ---
 title: "JVM (3) - JVM Runtime Data Area"
-date: 2024-07-12
+date: 2024-07-14
 update: 2024-07-12
 tags:
   - Java
