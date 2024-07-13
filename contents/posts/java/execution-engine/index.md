@@ -5,7 +5,7 @@ update: 2024-07-12
 tags:
   - Java
   - JVM
-series: "자바 개념 공부"
+series: "JVM"
 ---
 ### Execution Engine
 

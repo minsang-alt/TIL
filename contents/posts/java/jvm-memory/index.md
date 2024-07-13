@@ -5,7 +5,7 @@ update: 2024-07-12
 tags:
   - Java
   - JVM
-series: "자바 개념 공부"
+series: "JVM"
 ---
 이전 편에서 **Class Loader**에 의해 클래스 파일들이 **Runtime Data Area**에 적재됩니다.
 

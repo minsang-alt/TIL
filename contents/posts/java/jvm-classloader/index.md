@@ -5,7 +5,7 @@ update: 2024-07-12
 tags:
   - Java
   - JVM
-series: "자바 개념 공부"
+series: "JVM"
 ---
 `.java`파일을 컴파일러에 의해 컴파일된 바이너리 파일인 `.class`파일을 생성합니다.
 이 `.class`파일을 실행 시 **Class Loader**에 의해 JVM의 메모리에 각 클래스파일들을 탑재합니다.
