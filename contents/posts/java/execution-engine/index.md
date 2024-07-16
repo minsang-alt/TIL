@@ -7,7 +7,7 @@ tags:
   - JVM
 series: "JVM"
 ---
-### Execution Engine
+## Execution Engine
 
 binary 파일로 컴파일된 클래스 파일들을 클래스 로더에 의해 JVM 메모리 영역에 할당되었다면 이제 실행을 해야합니다.
 코드를 실행하기 위해서는 **execution engine**(실행엔진)이 사용됩니다. 
