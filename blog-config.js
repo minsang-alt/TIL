@@ -1,6 +1,6 @@
 module.exports = {
-  title: "evo.blog",
-  description: "지식과 경험을 기록하고 공유하는 학습 저장소",
+  title: "evo.TIL",
+  description: "지식과 경험을 기록하는 TIL 저장소",
   author: "MinSang",
   siteUrl: "https://evoblog.life/",
   links: {
