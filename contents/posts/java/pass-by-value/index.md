@@ -4,6 +4,7 @@ date: 2024-07-13
 update: 2024-07-12
 tags:
   - Java
+  - Interview
 ---
 
 각 언어마다 변수를 파라미터로 넘길 때 방법(Pass by value, Pass by reference) 이 다른데, Java와 C++은 각각 어떠한 방식으로 전달하는 지 알아보겠습니다.
