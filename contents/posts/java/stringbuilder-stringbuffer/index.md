@@ -31,7 +31,7 @@ String의 + 연산은 버전마다 계속 최적화 되었습니다.
 
 항상 `concat` 메소드를 사용할 때마다 `new` 키워드를 사용해 새롭게 객체를 생성하기 때문에 매우 비효율적입니다.
 
-### StringBuffer와 StringBuilder
+### StringBuffer와 StringBuilder append()
 
 문자열을 `CharSequence`의 내부 버퍼에 저장하고 참조변수 `this`를 통해 본인 인스턴스를 반환하기 때문에 객체를 새롭게 생성하는 과정이 없어 성능이 좋습니다.
 
