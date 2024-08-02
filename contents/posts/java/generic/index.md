@@ -29,6 +29,36 @@ tags:
 
 즉, 메소드에 위와 같이 넘기는 것이 불가능한데, 따라서 제네릭 메소드나 와일드카드로 해결할 수 있습니다.
 
+**제네릭 메소드 예시**
+
+```java
+public static <T extends Animal> void addAnimal(List<T> list, T animal) {
+    list.add(animal);
+}
+
+// 사용 예
+List<Dog> dogs = new ArrayList<>();
+Dog dog = new Dog();
+addAnimal(dogs, dog);  // 정상 작동
+```
+
+**와일드 카드 예시**
+
+```java
+public static void printAnimals(List<? extends Animal> animals) {
+    for (Animal animal : animals) {
+        System.out.println(animal);
+    }
+}
+
+// 사용 예
+List<Dog> dogs = new ArrayList<>();
+dogs.add(new Dog());
+printAnimals(dogs);  // 정상 작동
+```
+
+
+
 ### bounded 와일드 카드와 unbounded 와일드 카드 차이점
 
 `Unbounded 와일드카드`란, 와일드카드 문자 ?를 사용하여 지정되며, 모든 타입을 대신할 수 있는 와일드카드입니다. 
