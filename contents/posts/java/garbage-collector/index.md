@@ -1,11 +1,12 @@
 ---
 title: "JVM Garbage Collection (1) Reference Counting, Tracing Garbage Collection"
 date: 2024-07-17
-update: 2024-07-17
+update: 2024-08-01
 tags:
   - Java
   - JVM
   - GC
+  - Interview
 series: "Garbage Collection"
 ---
 
@@ -18,9 +19,9 @@ series: "Garbage Collection"
 
 1. 자바 프로그램으로 작성한 `.java` 파일을 **javac 컴파일러**를 이용해 **바이트코드(.class)로 컴파일** 합니다
 2. 컴파일된 `.class` 파일을 **ClassLoader**에 의해 JVM 메모리에 저장합니다. (loading, linking, initialising)
-3. **Interpreter는** 로드된 코드를 컴파일하고 실행합니다. 이때 **Method Cache에서 instruction 을 가져오고 어셈블리 코드로 변환**하는 작업을 합니다
+3. **Interpreter는** 로드된 코드를 한 줄씩 컴파일하고 실행합니다. 이때 **Method Cache에서 instruction 을 가져오고 어셈블리 코드로 변환**하는 작업을 합니다
 4. 성능 개선을 위해 **JIT 컴파일러**는 지속적으로 컴파일된 코드를 프로파일링 합니다. JIT 컴파일러는 자주 해석되는 코드, 즉 hotspot을 식별합니다. **JIT 컴파일러가
-   hotspot인 것을 미리 컴파일하여 Code Cache에 배치**합니다. 향후 중복된 instruction에 대해 인터프리터는 Method Cache 대신 Code Cache에서 코드를 가져옵니다
+   hotspot인 것을 미리 컴파일하여 네이티브 코드를 Code Cache에 배치**합니다. 향후 중복된 instruction에 대해 인터프리터는 Method Cache 대신 Code Cache에서 코드를 가져옵니다
 
 ## Garbage Collector 란
 

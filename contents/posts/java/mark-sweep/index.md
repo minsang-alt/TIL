@@ -6,6 +6,7 @@ tags:
   - Java
   - JVM
   - GC
+  - Interview
 series: "Garbage Collection"
 ---
 
@@ -15,7 +16,7 @@ series: "Garbage Collection"
 
 **Mark 단계는** 힙 영역에서 [live objects](https://stackoverflow.com/questions/4821664/what-is-the-difference-between-live-objects-and-allocated-objects-in-visualvm)를 찾아내는 과정입니다.
 
-a) **JVM은 힙에 할당된 모든 객체에 대한 포인터를 가지고 있습니다**. 이를 "할당 리스트" 또는 "ordinary object pointer(oop) 테이블"이라고 합니다.
+a) **JVM은 힙에 할당된 모든 객체에 대한 포인터를 가지고 있습니다**. 이를 "할당 리스트" 또는 "[ordinary object pointer(oop) 테이블](https://www.baeldung.com/jvm-compressed-oops)"이라고 합니다.
 
 b) **GC는** 이 **리스트의 모든 포인터를 순회하면서 각 객체의 "mark bit"를 초기화**합니다. 이렇게 하면 모든 객체가 일단 수집 대상이 됩니다.
 

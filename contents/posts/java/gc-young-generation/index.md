@@ -6,6 +6,7 @@ tags:
   - Java
   - JVM
   - GC
+  - Interview
 series: "Garbage Collection"
 ---
 
