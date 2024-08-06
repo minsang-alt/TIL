@@ -104,6 +104,15 @@ Vector 와 ArrayList 모두 List 인터페이스를 상속 받으므로 사용�
 
 따라서 조회상황에서도 동기화 작업이 일어나기 떄문에 ArrayList보다 성능이 떨어집니다.
 
+## HashMap 과 HashTable 차이점
+
+`HashMap`은 key와 value에 null을 허용하고 동기화를 보장하지 않아 thread-safe 하지 않습니다. 따라서 `싱글 쓰레드 환경`에서 사용하는 게 좋습니다.
+
+`HashTable`은 key와 value에 null을 허용하지 않으며, 동기화를 보장해 thread-safe합니다. `멀티 쓰레드 환경`에서 사용할 수 있습니다.
+
+`HashTable`이 아닌 `ConcurrentHashMap`을 멀티쓰레드환경에 써야하는이유는 Entry에 대해서만 락을 걸기때문에  데이터를 다루는 속도가 빠릅니다.
+
+
 ## HashSet 과 HashMap 차이점
 
 `HashSet`과 `HashMap` 모두 해싱을 사용하여 요소를 빠르게 저장하고 검색하는 자료구조 입니다. 두 컬렉션 모두 **해시 테이블을 사용**하여 요소를 저장하지만 다음과 같은 차이점이 있습니다.

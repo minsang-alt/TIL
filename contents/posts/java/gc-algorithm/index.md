@@ -19,21 +19,23 @@ Old 영역은 기본적으로 데이터가 가득 차면 GC를 실행합니다. 
 
 `Serial GC`는 **garbage collection을 위해 단일 스레드를 사용**합니다. 또한 적은 메모리와 CPU 코어 개수가 적을 때 적합한 방식이므로 최신 운영서버에서는 피해야 하는 방식입니다.
 
-## Parallel GC (-XX: +UseParallelGC) - after Java 6
+## Parallel GC (-XX: +UseParallelGC)
 
 `Parallel GC`는 `Serial GC`와 기본적인 알고리즘은 같습니다. 하지만 `Serial GC`는 GC를 처리하는 스레드가 하나인 반해,
-**`Parallel GC`는 GC를 처리하는 쓰레드가 여러개** 입니다. 그렇기 때문에 `Serial GC`보다 빠르게 처리할 수 있습니다.
+**`Parallel GC`는 Minor GC를 처리하는 쓰레드가 여러개** 입니다. 그렇기 때문에 `Serial GC`보다 빠르게 처리할 수 있습니다.
 
-메모리가 충분하고 코어의 개수가 많을 때 유리합니다. 
+메모리가 충분하고 코어의 개수가 많을 때 유리합니다.
+
+## Parallel Old GC
+
+`Pallel old gc`는 기존 parallel gc에서 old 영역을 처리하는 방식이 다른데, **mark-summary-compact 방식을 사용합니다.**
+
+`mark-sweep-compact`방식은 단일 스레드가 old영역을 검사하는 방식이라면 `mark-summary-compact`방식은 여러 스레드를 사용해서 old영역을 탐색합니다.
 
 ![](img_1.png)
 
 위의 그림처럼 3개의 GC 스레드가 있다고 가정하면 Tenured Heap 영역은 3개의 영역으로 나뉩니다. 이때 Compact 단계에서 객체를 낮은 영역에서 높은 영역으로 이동하여
 메모리 단편화를 제거합니다.
-
-## Parallel Old GC
-
-`Pallel old gc`는 기존 parallel gc에서 old 영역을 처리하는 방식이 다른데, **mark-summary-compact 방식을 사용합니다.**
 
 
 ## CMS GC (-XX: +UseConcMarkSweepGC)
