@@ -92,7 +92,7 @@ Runnable 인터페이스의 run() 메소드는 아무런 체크예외를 던지�
 이렇게 규칙이 생긴 이유는 안전한 예외처리를 의도함으로 보입니다. 강제로 try-catch 문을 만들도록 하여 **프로그램이 비정상 종료되는 상황을 방지할 수 있고,
 특히, 멀티스레딩 환경에서 예외 처리를 강제함으로써 스레드의 안정성과 일관성을 유지**할 수 있습니다.
 
-### sleep(long millis)
+## sleep(long millis)
 
 `Thread.sleep(long millis)`을 통해 Runnable인 상태인 스레드를 Timed Waiting 상태로 바꿉니다. 이때 이 sleep 메소드는 `throws InterruptedException`으로 체크 예외를 던질 수 있는 메소드입니다.
 즉, run() 메소드안에서 sleep을 사용할 경우 try-catch 블록을 만들어야 합니다.
@@ -100,7 +100,7 @@ Runnable 인터페이스의 run() 메소드는 아무런 체크예외를 던지�
 sleep이 `InterruptedException` 던질 수 있으므로, interrupt() 메소드로 IntteruptedException을 발생시켜 
 **해당 sleep을 사용하여 Timed Waiting 걸린 스레드**를 강제로 깨워서 Runnable 상태로 바꾸고 해당 예외를 던질 수 있게 합니다.
 
-### join
+## join
 
 ```java
  public static void main(String[] args) {
@@ -126,7 +126,7 @@ static class Job implements Runnable {
 join 메소드를 사용하는 경우는 특정 스레드들의 작업이 끝나야지 다음 코드를 진행할 수 있을 때 사용합니다.   
 
 
-### interrupt (인터럽트)
+## interrupt (인터럽트)
 
 인터럽트를 사용하면, `WAITING` , `TIMED_WAITING` 같은 대기 상태의 스레드를 직접 깨워서, 작동하는 `RUNNABLE`
 상태로 만들 수 있습니다. 
@@ -168,12 +168,25 @@ Thread가 sleep에 직면할 때 `InterruptedException`이 발생하여 `TIMED_W
 참고로, `Thread.interrupted()`는 스레드가 인터럽트 상태일 때 true를 반환하고, 해당 스레드의 인터럽트 상태를 false로 변경합니다.
 만약 스레드가 인터럽트 상태가 아니라면 false를 반환하고, 해당 스레드의 인터럽트 상태를 변경하지 않습니다.
 
-### yield
+## yield
 
 특정 스레드가 `Thread.yield()`를 호출하면 현재 호출한 스레드가 CPU를 양보하도록 하고 
 만약, 양보받을 스레드가 있다면 호출스레드는 스케줄링 대기 큐로 돌아가게 됩니다. 하지만 양보받을 스레드가 없다면 호출 스레드는 여전히 실행됩니다. 
 
-즉 스케줄링 대기큐로 돌아간다는 것은 여전히 RUNNABLE 상태를 유지하는 것과 같습니다. 
+즉 스케줄링 대기큐로 돌아간다는 것은 여전히 RUNNABLE 상태를 유지하는 것과 같습니다.
+
+## 로그 유틸리티
+
+```java
+public abstract class MyLogger {
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
+    
+    public static void log(Object obj) {
+        String time = LocalTime.now().format(formatter);
+        System.out.printf("%s [%9s] %s\n", time, Thread.currentThread().getName(), obj);
+    }
+}
+```
 
 
 ## Reference
