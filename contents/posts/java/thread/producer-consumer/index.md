@@ -1,7 +1,7 @@
 ---
 title: "생산자 소비자 문제"
-date: 2024-08-10
-update: 2024-08-11
+date: 2024-08-12
+update: 2024-08-12
 tags:
   - Java
   - Interview

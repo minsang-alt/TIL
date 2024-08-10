@@ -1,7 +1,7 @@
 ---
 title: "메모리 가시성과 동시성"
-date: 2024-08-10
-update: 2024-08-10
+date: 2024-08-11
+update: 2024-08-11
 tags:
   - Java
   - Interview

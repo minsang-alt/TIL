@@ -1,7 +1,7 @@
 ---
 title: "동시성 컬렉션"
-date: 2024-08-10
-update: 2024-08-10
+date: 2024-08-13
+update: 2024-08-13
 tags:
   - Java
   - Interview
@@ -87,3 +87,7 @@ test 메소드는 인터페이스인 List에만 의존하며 List 구현체인 L
 자바 1.5부터 concurrent 패키지에 동시성을 위한 컬렉션을 제공합니다.  예를 들어, `ConcurrentHashMap` , `CopyOnWriteArrayList` , `BlockingQueue` 등은 다양한 최적화 기법을 적용했습니다.
 
 `synchronized` , `Lock` ( `ReentrantLock` ), `CAS` , 분할 잠금 기술(segment lock)등 다양한 방법을 섞어서 매우 정교한 동기화를 구현하면서 동시에 성능도 최적화했습니다.
+
+## Reference
+
+[김영한의 실전 자바 - 고급 1편, 멀티스레드와 동시성](https://inf.run/DqqWF)
