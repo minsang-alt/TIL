@@ -324,6 +324,9 @@ public class BankAccount {
 
 **`Lock` 인터페이스와 `ReentrantLock` 구현체를 사용하면 `synchronized` 단점인 무한 대기와 공정성 문제를 모두 해결할 수 있습니다.**
 
+왜냐하면 lock을 얻지못하면, BLOCKED 상태가 아니라 WAITED 상태라서, 인터럽트를 걸거나 unlock 메소드, 소요 시간으로 무한대기에서 벗어날 수 있습니다.
+또한, `ReentrantLock`의 생성자에 true을 전달하면 공정모드로 스레드를 순서대로 깨우기 때문에 공정성 문제도 해결할 수 있습니다.
+
 
 
 ## getter 메소드에 Lock을 걸어야 하는 이유
