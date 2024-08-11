@@ -1,5 +1,5 @@
 ---
-title: "스레드 풀과 Executor 프레임워크"
+title: "(6) 스레드 풀과 Executor 프레임워크"
 date: 2024-08-14
 update: 2024-08-14
 tags:

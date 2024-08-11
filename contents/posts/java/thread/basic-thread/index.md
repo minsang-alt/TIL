@@ -1,5 +1,5 @@
 ---
-title: "Thread 기본구현과 상태"
+title: "(2) Thread 기본구현과 상태"
 date: 2024-08-09
 update: 2024-08-09
 tags:
