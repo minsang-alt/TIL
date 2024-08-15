@@ -48,11 +48,11 @@ synchronized(this){
 
 ### Object - wait, notify
 
-자바의 `Object.wait()` , `Object.noitfy()` 를 사용하면 락을 가진 스레드가 대기하려고 할때 다른 스레드에게 락을 양보하여 해결할 수 있습니다.
+자바의 `Object.wait()` , `Object.notify()` 를 사용하면 락을 가진 스레드가 대기하려고 할때 다른 스레드에게 락을 양보하여 해결할 수 있습니다.
 
 - `Object.wait()` :  현재 스레드가 가진 락을 반납하고 `WAITING` 합니다. 이 메소드는 현재 스레드가 `synchronized` 블록이나 메소드에서 락을 소유하고 있을때만 호출할 수 있습니다.
-- `Object.norify()` : 대기 중인 스레드 중 하나를 깨웁니다. 이 메소드는 `synchronized` 메소드나 블록 내에서 호출되야 하며, 대기하다가 깨워진 스레드는 락을 다시 획득할 기회를 얻습니다.
-- `Object.norifyAll()` : 대기 중인 모든 스레드를 깨웁니다.
+- `Object.notify()` : 대기 중인 스레드 중 하나를 깨웁니다. 이 메소드는 `synchronized` 메소드나 블록 내에서 호출되야 하며, 대기하다가 깨워진 스레드는 락을 다시 획득할 기회를 얻습니다.
+- `Object.notifyAll()` : 대기 중인 모든 스레드를 깨웁니다.
 
 
 **활용 예제**

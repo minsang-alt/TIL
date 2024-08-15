@@ -1,5 +1,5 @@
 module.exports = {
-  title: "evo.TIL",
+  title: "TIL",
   description: "지식과 경험을 기록하는 TIL 저장소",
   author: "MinSang",
   siteUrl: "https://evoblog.life/",
@@ -9,7 +9,7 @@ module.exports = {
     blogger: "https://babgeuleus.tistory.com/"
   },
   utterances: {
-    repo: "minsang-alt/evo.blog",
+    repo: "minsang-alt/TIL",
     type: "pathname",
   },
 }
