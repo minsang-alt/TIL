@@ -1,11 +1,10 @@
 ---
-title: "spring에서 master/slave 구성하기"
+title: "Spring에서 master/slave 구성하기"
 date: 2024-08-22
 update: 2024-08-22
 tags:
   - Book-Challenge
   - Spring
-  - MySQL
   - Database
 ---
 ### 0. 실행 환경
