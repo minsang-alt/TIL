@@ -1,7 +1,7 @@
 ---
 title: "IoC에서 어떻게 빈이 생성되는가"
-date: 2024-08-27
-update: 2024-08-27
+date: 2024-08-29
+update: 2024-08-29
 tags:
   - Spring
 ---
