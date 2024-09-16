@@ -20,6 +20,9 @@ Exception은 try-catch로 프로그램의 비정상 종료를 막을 수 있으�
 
 반면 Exception 클래스에서 파생된 모든 클래스들은 `chekcedException` 입니다. 따라서 명시적으로 예외를 처리하지 않으면 컴파일 에러가 발생합니다.
 
+CheckedException은 호출 코드에서 예외를 처리하도록 강제합니다. 이는 복구가 가능한 예외를 처리하도록 try-catch문을 사용하도록 강제합니다.
+반면, RuntimeException인 언체크 예외는 복구할 수 없는 예외로 간주하여 예외처리를 강제하지 않습니다. 
+
 ## finally 블록을 사용하는 이유
 
 `finally`와 연결된 try 블록으로 진입을 하면, 무조건 실행되는 영역이 `finally` 블록입니다.
