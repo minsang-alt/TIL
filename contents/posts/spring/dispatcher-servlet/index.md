@@ -6,7 +6,7 @@ tags:
   - Spring
 ---
 
-클라이언트에서 처음 Swagger 페이지를 GET 요청했을 때 흐름을 적어봤습니다. 
+클라이언트에서 처음 Swagger 페이지를 GET 요청했을 때 흐름을 적어봤습니다.
 
 ## DispatcherServlet 요청 흐름
 

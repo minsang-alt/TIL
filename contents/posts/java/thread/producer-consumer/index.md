@@ -193,7 +193,7 @@ public class BoundedQueue{
 `ReentrantLock`은 `lock.lock()`을 호출했을 때 락이 없다면 `WAITING` 상태로 락 대기 큐에 대기하고 있습니다. 다른 스레드가 `lock.unlock()`을 호출 했을 때
 대기가 풀리며 락 획득 시도를 하고 락을 획득하면 대기 큐를 빠져나갑니다.
 
-또한 `condition.await()`를 호출 했을 때, `condition` 객체의 스레드 대기 공간에서 WAITING 상태로 대기합니다. 다른 스레드가 `condition.await()`를
+또한 `condition.await()`를 호출 했을 때, `condition` 객체의 스레드 대기 공간에서 WAITING 상태로 대기합니다. 다른 스레드가 `condition.signal()`를
 호출 했을 때, `condition` 객체의 스레드 대기 공간에서 빠져나갑니다.
 
 깨어난 스레드는 `WAITING` 상태로 락 대기 큐에 진입하고, 락을 획득하면 `RUNNABLE` 상태가 되면서 코드를 실행할 수 있습니다.
