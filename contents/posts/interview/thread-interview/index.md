@@ -1,5 +1,5 @@
 ---
-title: "5주차 인터뷰 질문 대비"
+title: "스레드 관련 나올 수 있는 질문 모음"
 date: 2024-08-18
 update: 2024-08-18
 tags:
@@ -8,7 +8,7 @@ tags:
   - Thread
   - 동시성
   - F-lab
-series: Interview 정리
+series: "멀티스레드와 동시성"
 ---
 
 ## 1. 동기 & 비동기 & 블로킹 & 논블로킹
