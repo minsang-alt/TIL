@@ -1,7 +1,7 @@
 ---
 title: "(1) 동시성 이슈란"
-date: 2024-10-30
-update: 2024-10-30
+date: 2024-10-28
+update: 2024-10-28
 tags:
   - lock
 series: "동시성 이슈 제어 기법"
