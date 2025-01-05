@@ -3,7 +3,7 @@ title: "(1) MySQL Full-Text Ngram Parser 소개"
 date: 2025-01-04
 update: 2025-01-04
 tags:
-  - AgileHub
+  - BookChallenge
   - mysql
 series: "ngram parser"
 ---
